@@ -1,0 +1,236 @@
+.admin-management {
+    padding: var(--space-8) 0;
+    min-height: 100vh;
+    background: var(--color-gray-50);
+}
+
+.management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.management-header h1 {
+    margin: 0;
+    color: var(--color-gray-900);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.admins-list .card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.admins-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admins-table thead {
+    background: var(--color-gray-100);
+}
+
+.admins-table th {
+    padding: var(--space-4) var(--space-6);
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.admins-table tbody tr {
+    border-bottom: 1px solid var(--color-gray-200);
+    transition: background 0.2s ease;
+}
+
+.admins-table tbody tr:hover {
+    background: var(--color-gray-50);
+}
+
+.admins-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.admins-table td {
+    padding: var(--space-5) var(--space-6);
+    color: var(--color-gray-900);
+}
+
+.admin-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 500;
+}
+
+.you-badge {
+    padding: var(--space-1) var(--space-2);
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.role-badge {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.role-badge.super_admin {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.role-badge.admin {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.protected-text {
+    color: var(--color-gray-500);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.empty-state {
+    padding: var(--space-16);
+    text-align: center;
+}
+
+.empty-state p {
+    color: var(--color-gray-500);
+    margin: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--space-4);
+}
+
+.modal-content {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--color-gray-900);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-gray-600);
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--color-gray-900);
+}
+
+.modal-content form {
+    padding: var(--space-6);
+}
+
+.form-hint {
+    display: block;
+    margin-top: var(--space-1);
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+}
+
+.modal-footer {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+@media (max-width: 768px) {
+    .management-header {
+        flex-direction: column;
+        gap: var(--space-4);
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .admins-table {
+        font-size: 0.875rem;
+    }
+
+    .admins-table th,
+    .admins-table td {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    /* Stack table on mobile */
+    .admins-table thead {
+        display: none;
+    }
+
+    .admins-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--space-4);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-md);
+    }
+
+    .admins-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-3);
+        border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .admins-table td:last-child {
+        border-bottom: none;
+    }
+
+    .admins-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--color-gray-700);
+    }
+}

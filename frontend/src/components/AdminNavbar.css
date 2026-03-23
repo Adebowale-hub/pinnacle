@@ -1,0 +1,93 @@
+.admin-navbar {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.admin-navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) 0;
+}
+
+.admin-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 0;
+}
+
+.admin-logo .logo-pinnacle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.admin-logo .logo-supermarket {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.admin-nav-items {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.admin-nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.admin-nav-link:hover {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding-left: var(--space-4);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-name {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .admin-nav-items {
+        gap: var(--space-3);
+        flex-wrap: wrap;
+    }
+
+    .admin-nav-link {
+        font-size: 0.85rem;
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .admin-user-info {
+        width: 100%;
+        justify-content: flex-end;
+        border-left: none;
+        padding-left: 0;
+        margin-top: var(--space-2);
+    }
+}

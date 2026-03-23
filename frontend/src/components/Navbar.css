@@ -1,0 +1,100 @@
+.navbar {
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) 0;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.logo-pinnacle {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+}
+
+.logo-supermarket {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    letter-spacing: 0.1em;
+}
+
+.navbar-links {
+    display: flex;
+    gap: var(--space-8);
+}
+
+.navbar-links a {
+    font-weight: 600;
+    color: var(--color-gray-700);
+    transition: color var(--transition-fast);
+}
+
+.navbar-links a:hover {
+    color: var(--color-primary);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.cart-button {
+    position: relative;
+    padding: var(--space-2);
+    color: var(--color-gray-700);
+    transition: color var(--transition-fast);
+}
+
+.cart-button:hover {
+    color: var(--color-primary);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-menu {
+    display: flex;
+    gap: var(--space-3);
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-logo {
+        font-size: var(--font-size-lg);
+    }
+
+    .logo-supermarket {
+        font-size: var(--font-size-xs);
+    }
+}

@@ -40,7 +40,7 @@ export const initializePayment = async (
                 metadata: {
                     orderId
                 },
-                callback_url: `${process.env.FRONTEND_URL}/payment/verify`
+                callback_url: `${process.env.FRONTEND_URL}/order-success`
             },
             {
                 headers: {

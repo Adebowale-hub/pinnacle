@@ -31,6 +31,11 @@ const OrderSuccess = () => {
             if (response.data.success) {
                 setOrder(response.data.order);
                 clearCart(); // Clear the cart after successful payment
+
+                // Redirect to home page after a brief delay
+                setTimeout(() => {
+                    navigate('/');
+                }, 3000);
             } else {
                 setError('Payment verification failed');
             }
